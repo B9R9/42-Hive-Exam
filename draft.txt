@@ -1,0 +1,34 @@
+Reproduce the exam Alone i the dark.
+Exercisev yourself by rewritting functions
+we can also put some debugging exercises
+
+Inteface in C language
+
+Running compilation and checking  bash script
+
+simulate a push by a bash command
+
+Lancement du programme 
+ enter son username -> permet daccerder a lhistorique
+
+2 modes : free time ou time death line a definnir
+
+choix du niveau ou commencer
+
+attribution de l exercice
+
+quand exercice fini 
+submit lexercise pour correwction
+
+attribution des poinys ou pas 
+
+avance au prochain exercices
+
+
+-- definir les exercises
+-- definir le niveaux de diffculter des exercises
+-- definir les nombre des points par exersices
+-- choix des exerices  doit se faire de manires aleatoires
+-- quest qui se passe quand il ny a plus dexercices
+-- possibilite de passer a lexercise en depensant ces points 
+-- fin quan le temps est fini

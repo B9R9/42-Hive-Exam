@@ -32,3 +32,4 @@ avance au prochain exercices
 -- quest qui se passe quand il ny a plus dexercices
 -- possibilite de passer a lexercise en depensant ces points 
 -- fin quan le temps est fini
+-- utlisation de struc pour gerer parametres player

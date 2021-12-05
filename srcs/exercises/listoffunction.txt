@@ -1,0 +1,30 @@
+/*---------------LEVEL 1-------------*/
+ft_putchar
+
+/*---------------LEVEL 2-------------*/
+
+
+/*---------------LEVEL 3-------------*/
+
+
+/*---------------LEVEL 4-------------*/
+
+
+/*---------------LEVEL 5-------------*/
+
+
+
+
+/*--------------LIST OF FUNCTIONS------*/
+Aff_last param
+ft_atoi
+ft_is_power_of_two
+ft_putstr
+ft_strlen
+ft_swap
+ft_sort_param
+Transform_in_lower_case
+Transform to_upper_case
+read_file
+ft_putnbr
+§

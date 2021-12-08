@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 10:16:36 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/08 12:27:35 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/08 14:25:03 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 #include <sys/types.h>
 #include <time.h>
 #include <math.h>
-
+/*
 int	ft_randomnbr(int n)
 {
-	/*function need to take int n. n will be the total of len arr name function level i.*/
+	function need to take int n. n will be the total of len arr name function level i.
 	srand(time(NULL));
 	int	nbr;
 	int	min;
@@ -47,24 +47,48 @@ int	ft_get_total_function()
 	fclose(fp);
 	return (ret);
 }
-
-char	*get_function(int n)
+*/
+void	get_function()
 {
-	FILE	*fp;
-	static char	start[100];
-	int		ret;
+	FILE		*fp;
+	char		*line_buffer;
+	size_t		line_buffer_size;
+	ssize_t		line_size;
+	int			line_counter;
 
+	line_buffer = NULL;
+	line_buffer_size = 0;
+	line_counter = 0;
+	/*if (!fp)
+	{
+		perror("ERROR! Can not open this file!");
+		exit(EXIT_FAILURE);
+	}*/
 	fp = fopen("/Users/ghorvath/Workspace/ExamShell/srcs/structure/function_generator/level1_function.txt", "r");
-	fgets(&start[1], 4, fp);
-	printf("%s", start);
-	return (start);
+	line_size = getline(&line_buffer, &line_buffer_size, fp);
+	while (line_size >= 0)
+	{
+		if (line_size == 1)
+			continue;
+		else
+			line_size = getline(&line_buffer, &line_buffer_size, fp);
+			printf("%s", line_buffer);
+		line_counter++;
+
+	}
+	free(line_buffer);
+	line_buffer = NULL;
+	/*if (fclose(fp) == -1)
+	{
+		perror("ERROR! Can not close this file");
+		exit(EXIT_FAILURE);
+	}
+	return (*line_buffer);*/
 }
-
-
 
 int main()
 {
-	//get_totalfunction();
-	ft_randomnbr(ft_get_total_function());
+	get_function();
+	//ft_randomnbr(ft_get_total_function());
 	//ft_get_total_function(ft_randomnbr());
 }

@@ -6,11 +6,21 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:42:02 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/08 12:27:37 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/08 11:54:16 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/libexam.h"
+//#include "libexam.h"
+
+#include <stdio.h>
+#include <string.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <time.h>
+#include <math.h>
 
 int	ft_randomnbr()
 {
@@ -21,13 +31,13 @@ int	ft_randomnbr()
 	int	max;
 
 	min = 1;
-	max = 100;
+	max = 5;
 	nbr = (rand()%(max - min + 1 )) + min;
 	return (nbr);
 }
-/*
+
 int	main()
 {
-	printf("%d\n", randomnbr());
+	printf("%d\n", ft_randomnbr());
 }
-*/
+

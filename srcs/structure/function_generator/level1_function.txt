@@ -1,0 +1,5 @@
+04
+ft_putchar
+ft_putstr
+ft_putnbr
+ft_strlen

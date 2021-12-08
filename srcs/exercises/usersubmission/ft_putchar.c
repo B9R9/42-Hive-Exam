@@ -6,13 +6,13 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 15:42:36 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/05 15:43:49 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/08 09:28:16 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 
-void    ft_putchar(char c)
+void	ft_putchar(char c)
 {
-    write (1, &c, 1);
+	write (1, &c, 1);
 }

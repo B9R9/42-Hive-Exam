@@ -6,7 +6,7 @@
 #    By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/01 15:45:36 by briffard          #+#    #+#              #
-#    Updated: 2021/12/01 16:21:26 by briffard         ###   ########.fr        #
+#    Updated: 2021/12/08 08:39:21 by briffard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ CCFLAGS= -Werror -Wall -Wextra
 RM= rm -f
 
 
+#COMPILATION of mainfiles
 
 all: $(NAME)
 
@@ -39,6 +40,7 @@ fclean: clean
 
 re: fclean all
 
+#Submission Part
 submit:
 	#check the compilation and the file 
 	#run the norminette

@@ -39,7 +39,7 @@ int     main()
 	 * MODE EXAM    ---> 3h and points // same enviroment than Alone in the dark
 	 * MODE TIME    ---> define a time line per exercisie 
 	 * MODE RUSSIAN ---> exercise until you fail
-	 *
+ 	 *
 	 *
 	 * exercises are choosen ramdomly
 	 * exercises are class by level of difficulties

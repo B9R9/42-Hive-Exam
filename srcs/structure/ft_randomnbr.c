@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libexam.h"
+#include "./include/libexam.h"
 
 int	ft_randomnbr()
 {

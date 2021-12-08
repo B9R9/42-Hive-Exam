@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:56:36 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/01 15:45:23 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/08 10:58:04 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@
 #include<string.h>
 #include<unistd.h>
 #include<stdio.h>
-
+#include "libft.h"
 
 /*PROTOTYPE*/
 int		ft_randomnbr();
+void	header();
+
 #endif

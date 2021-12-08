@@ -6,7 +6,7 @@
 /*   By: briffard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 09:59:03 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/08 21:00:08 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/08 21:28:12 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 
 int	is_power_of_2(unsigned int c)
 {
-	unsigned long   i;
+    unsigned long i,
 
-	i = 1;
-	while(i < c)
+    i = 1;
+    while(i < c)
         i = 2 * i;
-    if (i == c)
+    if (i == n)
         return (1);
-    else
+    else 
 	    return(0);
 }
 

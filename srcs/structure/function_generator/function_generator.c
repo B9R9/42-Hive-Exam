@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_total_function.c                            :+:      :+:    :+:   */
+/*   function_generator.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 10:16:36 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/08 14:25:03 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/08 16:55:01 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,30 @@
 #include <sys/types.h>
 #include <time.h>
 #include <math.h>
+
 /*
+**ft_randomnbr:		randomly choose a number from the available functions from the choosen level
+*/
+
 int	ft_randomnbr(int n)
 {
-	function need to take int n. n will be the total of len arr name function level i.
+	//function need to take int n. n will be the total of len arr name function level i.
 	srand(time(NULL));
 	int	nbr;
 	int	min;
 	int	max;
 
 	min = 1;
-	max = 5;
+	max = n;
 	nbr = (rand()%(max - min + 1 )) + min;
 	return (nbr);
 }
 
-int	ft_get_total_function()
+/*
+**ft_get_all_function:		outputing the total amount of functions number in integer for randomnbr
+*/
+
+int	ft_get_all_function()
 {
 	FILE	*fp;
 	char	str[3];
@@ -43,12 +51,16 @@ int	ft_get_total_function()
 	fp = fopen("/Users/ghorvath/Workspace/ExamShell/srcs/structure/function_generator/level1_function.txt", "r");
 	fgets(str, 3, fp);
 	ret = atoi(str);
-	printf("%d", ret);
 	fclose(fp);
 	return (ret);
 }
+
+/*
+**ft_get_function:		open and read all the given function from the txt file
+**and output it, that ft_randomnbr could chose randomly one
 */
-void	get_function()
+
+char	*ft_get_function(int n)
 {
 	FILE		*fp;
 	char		*line_buffer;
@@ -58,37 +70,28 @@ void	get_function()
 
 	line_buffer = NULL;
 	line_buffer_size = 0;
-	line_counter = 0;
-	/*if (!fp)
-	{
-		perror("ERROR! Can not open this file!");
-		exit(EXIT_FAILURE);
-	}*/
+	line_counter = 1;
 	fp = fopen("/Users/ghorvath/Workspace/ExamShell/srcs/structure/function_generator/level1_function.txt", "r");
 	line_size = getline(&line_buffer, &line_buffer_size, fp);
-	while (line_size >= 0)
+	while (line_size >= 1 )
 	{
+		line_size = getline(&line_buffer, &line_buffer_size, fp);
 		if (line_size == 1)
 			continue;
-		else
-			line_size = getline(&line_buffer, &line_buffer_size, fp);
+		else if (line_counter == n)
+		{
 			printf("%s", line_buffer);
+		}
 		line_counter++;
-
 	}
 	free(line_buffer);
 	line_buffer = NULL;
-	/*if (fclose(fp) == -1)
-	{
-		perror("ERROR! Can not close this file");
-		exit(EXIT_FAILURE);
-	}
-	return (*line_buffer);*/
+	fclose(fp);
+	return (line_buffer);
 }
 
 int main()
 {
-	get_function();
-	//ft_randomnbr(ft_get_total_function());
-	//ft_get_total_function(ft_randomnbr());
+	ft_get_function(ft_randomnbr(ft_get_all_function()));
+	return (0);
 }

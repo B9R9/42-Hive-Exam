@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:42:02 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/08 12:27:37 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/08 12:40:11 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,4 @@ int	main()
 	printf("%d\n", randomnbr());
 }
 */
+//testing

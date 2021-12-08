@@ -6,40 +6,37 @@
 /*   By: briffard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 09:59:03 by briffard          #+#    #+#             */
-/*   Updated: 2021/11/15 10:38:04 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/08 21:00:08 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 #include<unistd.h>
 #include<string.h>
+#include<math.h>
 
-/*int	is_power_of_2(int c)
+int	is_power_of_2(unsigned int c)
 {
-	int i;
+	unsigned long   i;
 
-	i = 0;
-	if(c == 1)
-		return(1);
-	else
-		while(i <= c)
-		{
-			if(i * i == c)
-				return(1);
-			i++;
-		}
-		return(0);
+	i = 1;
+	while(i < c)
+        i = 2 * i;
+    if (i == c)
+        return (1);
+    else
+	    return(0);
 }
-*/
+
 int main()
 {
-	const char *emoji = "\U0001f921";
-	write(1, emoji, strlen(emoji));
-	/*int i = 0;
+	//const char *emoji = "\U0001f921";
+	//write(1, emoji, strlen(emoji));
+	int i = 0;
 
-	while(i < 30)
+	while(i < 40)
 	{
-		printf("i = %d - - = %d\n", i, is_power_of_2(i));
+		printf("%d is %s\n",i, is_power_of_2(i) ? "true" : "false");
 		i++;
-	}*/
+	}
 }

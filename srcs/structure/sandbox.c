@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 13:42:39 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/09 16:07:03 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/09 16:37:26 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,17 @@ int	main()
 	ret03 = scanf("%d", &lvl03);
 	ret04 = scanf("%d", &lvl04);
 	ret05 = scanf("%d", &lvl05);
-	if (!ret) //in case of problem
+	if (!ret00) //in case of problem
+		printf("ERROR");
+	if (!ret01)
+		printf("ERROR");
+	if (!ret02)
+		printf("ERROR");
+	if (!ret03)
+		printf("ERROR");
+	if (!ret04)
+		printf("ERROR");
+	if (!ret05)
 		printf("ERROR");
 // we should also handle if the use choice is n > 0 ou n < 5
 

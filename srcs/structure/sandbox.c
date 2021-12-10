@@ -6,11 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 11:39:54 by briffard          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2021/12/10 13:14:32 by briffard         ###   ########.fr       */
-=======
-/*   Updated: 2021/12/10 11:54:19 by ghorvath         ###   ########.fr       */
->>>>>>> Gabor
+/*   Updated: 2021/12/10 13:39:07 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +21,12 @@ static char	*file_name(char *fn)
 
 int	main()
 {
-	//void	sandbox_header();
-
 	int		fd, fd1, lvl, ret;
 	char	*test;
 	fd1 = 0;
+
+	sandbox_header();
+
 /*----------------------- INTRODUCTION TEXTE --------------------------------*/
 	fd = open("./text/sandbox.welcome.txt", O_RDONLY);
 	if (!fd)
@@ -61,7 +58,7 @@ int	main()
 	 * we can try also to copy test in a new str chr by chr and stop before the
 	 * \n
 	 * */
-
+	sandbox_header();
 	openinstruction(file_name(test));
 
 

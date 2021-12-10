@@ -11,7 +11,7 @@ void	clearBuffer()
 }
 int		ft_read(char *str, int lenght)
 {
-	char *start = NULL;
+	char	*start = NULL;
 
 	if(fgets(str, lenght, stdin) != NULL)
 	{

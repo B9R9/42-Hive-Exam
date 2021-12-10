@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+         #
+#    By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/01 15:45:36 by briffard          #+#    #+#              #
-#    Updated: 2021/12/08 08:39:21 by briffard         ###   ########.fr        #
+#    Updated: 2021/12/09 17:03:59 by ghorvath         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,5 +42,5 @@ re: fclean all
 
 #Submission Part
 submit:
-	#check the compilation and the file 
+	#check the compilation and the file
 	#run the norminette

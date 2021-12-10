@@ -1,0 +1,17 @@
+15
+
+ft_atoi
+ft_strdup
+inter
+last_word
+reverse_bits
+swap_bits
+union
+alpha_mirror
+max
+wdmatch
+do_op
+print_bits
+ft_strcmp
+ft_strrev
+is_power_of_2

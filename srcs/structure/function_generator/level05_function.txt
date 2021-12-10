@@ -1,7 +1,0 @@
-05
-
-print_memory
-brackets
-rpn_calc
-biggest_pal
-cycle_detector

@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 11:39:54 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/10 11:40:18 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/10 13:14:32 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	main()
 	char	*test;
 	fd1 = 0;
 /*----------------------- INTRODUCTION TEXTE --------------------------------*/
-	ft_putstrcolor("Before Message","green");
 	fd = open("./text/sandbox.welcome.txt", O_RDONLY);
 	if (!fd)
 		ft_putstrcolor("ERROR WELCOME MESSAGE", "red");
@@ -44,7 +43,6 @@ int	main()
   *  we should also handle if the user choice is n > 0 ou n < 5
  */
 /*---------------------GENERATOR FUNCTION -----------------------------------*/
-		ft_putstrcolor("before function generator\n", "green");
 		test = function_generator(lvl);
 /*--------------------DISPLAY INSTRUCTION------------------------------------*/
 

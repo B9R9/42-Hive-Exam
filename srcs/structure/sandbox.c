@@ -3,15 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sandbox.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-<<<<<<< HEAD
-/*   Created: 2021/12/08 13:42:39 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/10 09:35:05 by briffard         ###   ########.fr       */
-=======
 /*   Created: 2021/12/10 11:39:54 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/10 11:40:18 by briffard         ###   ########.fr       */
->>>>>>> main
+/*   Updated: 2021/12/10 11:54:19 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

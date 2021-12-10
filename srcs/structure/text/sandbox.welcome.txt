@@ -1,0 +1,8 @@
+
+					Welcome to the sandbox session!
+
+The sandbox mod offer you the possibility to pratice your coding skill without
+any contraints. It' s only about the learning.
+
+Before to strat, you will have to choose your enter level. There is 5 differents
+level. 1 is the easiest and 5 the hardest.

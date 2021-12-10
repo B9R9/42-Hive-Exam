@@ -6,25 +6,29 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:42:02 by briffard          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2021/12/10 09:21:27 by ghorvath         ###   ########.fr       */
-=======
-/*   Updated: 2021/12/08 11:54:16 by ghorvath         ###   ########.fr       */
->>>>>>> 2c7b7d182d4393682f84048960b32cad9c696220
+/*   Updated: 2021/12/08 12:40:11 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/libexam.h"
 
-int	ft_randomnbr(int n)
+int	ft_randomnbr()
 {
+	/*function need to take int n. n will be the total of len arr name function level i.*/
 	srand(time(NULL));
 	int	nbr;
 	int	min;
 	int	max;
 
 	min = 1;
-	max = n;
+	max = 100;
 	nbr = (rand()%(max - min + 1 )) + min;
 	return (nbr);
 }
+/*
+int	main()
+{
+	printf("%d\n", randomnbr());
+}
+*/
+//testing

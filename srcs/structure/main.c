@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 21:24:36 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/08 15:30:23 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/10 09:19:02 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,20 +49,20 @@ int	main()
  *	you need 75 point to succes the sessions
  *	when you leave stats are saved in a file
  *
- * MODE TIME    ---> define a time line per exercisie 
- * -> same as the sandbox 
- *  -> the restriction came with deathline for every function 
+ * MODE TIME    ---> define a time line per exercisie
+ * -> same as the sandbox
+ *  -> the restriction came with deathline for every function
  *  -> exemple: 10 min per function
  *  -> you can decide the time for every function lvl
  *
  * MODE RUSSIAN ---> exercise until you fail
  * -> you failed the sessions only when you mess a function
  *
- *MODE CONTEST ---> DREAM SESSION 
+ *MODE CONTEST ---> DREAM SESSION
  -> play again your friend to solve function
 
  MODE DEBUG
- --> Debug codes  game 
+ --> Debug codes  game
 
  * exercises are choosen ramdomly
  * exercises are class by level of difficulties

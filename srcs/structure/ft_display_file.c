@@ -1,39 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libexam.h                                          :+:      :+:    :+:   */
+/*   ft_display_file.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/01 14:56:36 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/09 09:42:23 by briffard         ###   ########.fr       */
+/*   Created: 2021/12/10 09:30:51 by briffard          #+#    #+#             */
+/*   Updated: 2021/12/10 09:31:53 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "./include/libexam.h"
+#include "./libft/includes/libft.h"
 
-#ifndef LIBEXAM_H
-# define LIBEXAM_H
+void	ft_display_file(int fd)
+{
+	char	*buffer;
 
-/*INCLUDE*/
+	while (read(fd, &buffer, 1))
+		write(1, &buffer, 1);
+}
 
-#include<time.h>
-#include<stdlib.h>
-#include<string.h>
-#include<unistd.h>
-#include<stdio.h>
-#include<fcntl.h>
-#include<sys/stat.h>
-#include<sys/types.h>
-#include<math.h>
-
-//#include "libft.h"
-
-/*PROTOTYPE*/
-
-int		ft_randomnbr(int n);
-void	header();
-char    *function_generator();
-void    openinstruction(char *fn);
-void    ft_display_file(int fd);
-
-#endif

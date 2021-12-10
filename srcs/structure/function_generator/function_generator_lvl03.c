@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   function_generator.c                               :+:      :+:    :+:   */
+/*   function_generator_lvl03.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 10:16:36 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/08 16:55:01 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/10 08:46:49 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	ft_get_all_function()
 	char	str[3];
 	int		ret;
 
-	fp = fopen("/Users/ghorvath/Workspace/ExamShell/srcs/structure/function_generator/level1_function.txt", "r");
+	fp = fopen("./structure/function_generator/level03_function.txt", "r");
 	fgets(str, 3, fp);
 	ret = atoi(str);
 	fclose(fp);
@@ -71,7 +71,7 @@ char	*ft_get_function(int n)
 	line_buffer = NULL;
 	line_buffer_size = 0;
 	line_counter = 1;
-	fp = fopen("/Users/ghorvath/Workspace/ExamShell/srcs/structure/function_generator/level1_function.txt", "r");
+	fp = fopen("./structure/function_generator/level03_function.txt", "r");
 	line_size = getline(&line_buffer, &line_buffer_size, fp);
 	while (line_size >= 1 )
 	{
@@ -80,7 +80,7 @@ char	*ft_get_function(int n)
 			continue;
 		else if (line_counter == n)
 		{
-			printf("%s", line_buffer);
+			return (line_buffer);
 		}
 		line_counter++;
 	}

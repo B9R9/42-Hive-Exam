@@ -6,13 +6,13 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 10:53:03 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/09 17:52:12 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/10 08:57:29 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/libexam.h"
 
-void	header()
+void	exam_header()
 {
 	system("clear");
 	printf("/***************************************************************************/\n");

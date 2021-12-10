@@ -1,18 +1,18 @@
 //#include "libft.h"
-//#include "testlibft.h"
+#include "testlibft.h"
 #include<unistd.h>
 #include<fcntl.h>
 #include<string.h>
 #include<stdio.h>
 
-void	ft_display_file(int		fd)
+void	ft_display_file(int fd)
 {
 	char	*buffer;
 	while(read(fd,&buffer,1))
 		write(1, &buffer,1);
 }
 
-void		ft_checkfd()
+void	ft_checkfd()
 {
 	FILE	*fd;
 	char	buffer[1000];
@@ -32,7 +32,9 @@ void		ft_checkfd()
 
 }
 
-int main()
+int	main()
 {
 	ft_checkfd();
-open}
+	open
+	return (0);
+}

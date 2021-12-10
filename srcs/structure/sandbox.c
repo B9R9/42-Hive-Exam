@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 11:39:54 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/10 13:39:07 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/10 16:00:53 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,11 @@ static char	*file_name(char *fn)
 int	main()
 {
 	int		fd, fd1, lvl, ret;
+	int	secondchoice;
 	char	*test;
 	fd1 = 0;
 
+	system("clear");
 	sandbox_header();
 
 /*----------------------- INTRODUCTION TEXTE --------------------------------*/
@@ -60,7 +62,17 @@ int	main()
 	 * */
 	sandbox_header();
 	openinstruction(file_name(test));
-
+	
+	ft_putchar('\n');
+	printf("-----------------------------------------------------------------\n");
+	ft_putstrcolor("1 - NEXT FUNCTION ","green");
+	ft_putstrcolor(" 2 - LVL DOWN ", "blue");
+	ft_putstrcolor(" 3 - LVL UP ", "red");
+	ft_putstrcolor(" 4 - SUBMIT ", "yellow");
+	ft_putstrcolor(" 5 - EXIT \n","white");
+	printf("-----------------------------------------------------------------\n");
+	scanf("%d", &secondchoice);
+	
 
 }
 

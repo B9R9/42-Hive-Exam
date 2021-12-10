@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 10:16:36 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/10 08:46:45 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/10 09:13:52 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char	*ft_get_function(int n)
 	line_counter = 1;
 	fp = fopen("./structure/function_generator/level05_function.txt", "r");
 	line_size = getline(&line_buffer, &line_buffer_size, fp);
-	while (line_size >= 1 )
+	while (line_size >= 1)
 	{
 		line_size = getline(&line_buffer, &line_buffer_size, fp);
 		if (line_size == 1)

@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 15:05:01 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/10 15:20:35 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/13 08:25:48 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,26 +43,42 @@ int main ()
 
 void	level_modifier();
 {
-	int	levels;
-	int	theChoices;
+	int	userchoice;
+	int	lvl;
+	int	lifes = 3;
+	do{
+			printf("Level00\nLevel01\nLevel02\nLevel04\nLevel05\n");
+			printf("Enter your level: ");
+			scanf("%d", &lvl);
 
-	while(1)
-	{
-		printf("Level00\nLevel01\nLevel02\nLevel04\nLevel05\n");
-		printf("Enter your level: ");
-		scanf("%d", &levels);
-
-		switch(levels)
+		switch(lvl)
+		{
 			case 1:
 				printf("1. Add\n 2. Subtract\n3. Go back to menu");
-				scanf("%d", &theChoices);
+				scanf("%d", &userchoice);
 
-      switch (theChoices) {
-         case 1:
-           //calculation ...
-         case 2:
-           //calculation ...
-         case 3:
-           // Go Back to menu which is Basic math, Intermediate Math, Advance math
-           // ***** I want to know how do i get back to the main menu. *****
-    case 2:
+			switch (theChoices)
+			{
+				case 1:
+				{
+					function_generator(lvl);
+					while (guess != secretnumber && outofguesses == 0)
+					{
+						if (quesscount < quesslimit)
+						{
+							//submit file
+							quesscount++;
+						}
+						else
+							outofguesses == 1;
+					}
+					if (outofguesses == 1)
+						printf("Failed! Would you like to try again?");
+					else
+						continue;
+				}
+
+			}
+			case 2:
+			}while (lvl != 0);
+}

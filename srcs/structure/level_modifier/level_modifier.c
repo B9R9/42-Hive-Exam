@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 15:05:01 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/13 08:25:48 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/21 12:45:59 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,65 +20,123 @@
 #include<sys/types.h>
 #include<math.h>
 #include<stdbool.h>
-/*
-void	level_modfier()
+
+
+
+void	life(void)
 {
-	int lvl = 0;
-	do
+	int	systemTest;
+	int	studentSubmition;
+	int	lifeCounter;
+	int	life;
+	int	outOfLife;
+	int	lvlCounter;
+	int	currentLevel;
+	//int	tracker;
+	int	number;
+
+	systemTest = 5;
+	lifeCounter = 0;
+	life = 3;
+	outOfLife = 0;
+	lvlCounter = 0;
+	printf("Choose your level: ");
+	scanf("%d", &currentLevel);
+	while (studentSubmition != systemTest && outOfLife == 0)
 	{
-		printf("Did it %d times\n",lvl);
-		lvl = lvl + 1;
-		if (lvl < 5)
-			continue;
+		if (lifeCounter < life)
+			{
+				/*here gonna come a submition function*/
+				printf("enter a number: ");
+				scanf("%d", &studentSubmition);
+				lifeCounter++;
+			}
+		else
+			outOfLife = 1;
+	}
+	while (lvlCounter < 6)
+	{
+			if (outOfLife == 1)
+		{
+			printf("Failed! Would you like to try again?");
+			printf("current level is: %d", currentLevel);
+			break;
+		}
+		else
+		{
+			printf("Succeeded!");
+			/*gain 1 more level*/
+
+			//tracker = (int *)malloc(number * sizeof(int));
+			//free(tracker);
+			//currentLevel = tracker;
+
+			currentLevel++;
+			printf("current level is: %d", currentLevel);
+			break;
+		}
 		break;
-	} while(true);
+	}
+	//return (currentLevel);
 }
 
-int main ()
-{
-	level_modfier();
-	return (0);
-}
-*/
-
+/*
 void	level_modifier();
 {
 	int	userchoice;
 	int	lvl;
 	int	lifes = 3;
-	do{
+	do
+	{
 			printf("Level00\nLevel01\nLevel02\nLevel04\nLevel05\n");
 			printf("Enter your level: ");
-			scanf("%d", &lvl);
+			scanf("%d", &userchoice);
 
-		switch(lvl)
+		switch(userchoice)
 		{
 			case 1:
-				printf("1. Add\n 2. Subtract\n3. Go back to menu");
-				scanf("%d", &userchoice);
-
-			switch (theChoices)
-			{
-				case 1:
+				do
 				{
-					function_generator(lvl);
-					while (guess != secretnumber && outofguesses == 0)
+					printf("1. Add\n 2. Subtract\n3. Go back to menu");
+					scanf("%d", &userchoice);
+					switch (theChoices)
 					{
-						if (quesscount < quesslimit)
-						{
-							//submit file
-							quesscount++;
-						}
-						else
-							outofguesses == 1;
-					}
-					if (outofguesses == 1)
-						printf("Failed! Would you like to try again?");
-					else
-						continue;
-				}
+						case 1:
+						function_generator(lvl);
 
-			}
-			case 2:
-			}while (lvl != 0);
+					}
+				}
+		}
+	}while (lvl != 0);
 }
+*/
+
+int	main()
+{
+	//printf("your level is %d\n", currentLevel);
+	life();
+	//printf("your level is %d\n", currentLevel);
+}
+
+
+/*
+int	main()
+{
+	int	lvl;
+
+	life(lvl);
+	if (lvl == 0)
+	{
+		lvl = 1;
+		printf("your levele is %d\n", lvl);
+	}
+	else
+	{
+		(lvl = 1);
+		printf("failed\n");
+	}
+	printf("your levele is %d\n", lvl);
+
+	return (0);
+}
+*/

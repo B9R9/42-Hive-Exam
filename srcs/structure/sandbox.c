@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 11:39:54 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/18 16:02:39 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/23 12:48:24 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,14 @@ static char	*file_name(char *fn)
 
 int	main()
 {
+
 	int		fd, lvl, ret;
-    int secondchoice;
+	int	secondchoice;
+
 	char	*test;
 
-    system("clear");
+
+	system("clear");
 	sandbox_header();
 
 /*----------------------- INTRODUCTION TEXTE --------------------------------*/
@@ -46,7 +49,9 @@ int	main()
  */
 /*---------------------GENERATOR FUNCTION -----------------------------------*/
 
-    test = function_generator(lvl);
+	do
+	{	
+	test = function_generator(lvl);
 
 /*--------------------DISPLAY INSTRUCTION------------------------------------*/
 
@@ -61,9 +66,9 @@ int	main()
 	 * we can try also to copy test in a new str chr by chr and stop before the
 	 * \n
 	 * */
-
-    sandbox_header();
-	openinstruction(file_name(test));
+	sandbox_header();
+	printf("CURRENT  LVL : %d\n", lvl);//find a nicer place 
+	openinstruction(file_name(test), lvl);
 
 /*------------------------------ FILE CHECKER -------------------------------------*/
 
@@ -108,7 +113,7 @@ we can can create function HELP who give you acces to definition of function of 
 We can maybe also create some multiple choice answer test.
 */
 
-/*----------------------------------------------------------------------------------*/
+/*------------------------- MENU END -------------------------------------------*/
     ft_putchar('\n');
     printf("-----------------------------------------------------------------\n");                
     ft_putstrcolor("1 - NEXT FUNCTION ","green");
@@ -119,5 +124,24 @@ We can maybe also create some multiple choice answer test.
     printf("-----------------------------------------------------------------\n");
     scanf("%d", &secondchoice);
 
+	switch(secondchoice)
+	{
+		case 1:
+			test = function_generator(lvl);
+			break ;
+		case 2:
+			if (lvl > 0)
+				lvl -= 1;
+			test = function_generator(lvl);
+			break ;
+		case 3:
+			if (lvl < 5)
+				lvl += 1;
+			test = function_generator(lvl);
+			break ;
+		case 4:
+			/*NEED CHECKER CODE */
+			break ;
+	}
+	}while (secondchoice != 5);
 }
-

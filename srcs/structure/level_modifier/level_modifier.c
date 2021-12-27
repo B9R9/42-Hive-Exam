@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 15:05:01 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/27 10:39:22 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/27 11:39:05 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,14 @@ int	ft_number_lenght(long nb)
 	return (counter);
 }
 */
+
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		c = c - 32;
+	return (c);
+}
+
 int	life(int currentLevel)
 {
 	int	systemTest = 5;
@@ -46,8 +54,8 @@ int	life(int currentLevel)
 	int	lifeCounter = 0;
 	int	life = 3;
 	int	outOfLife = 0;
-	//int	currentLevel;
 	//int	*tracker;
+	char	input;
 
 	while (studentSubmition != systemTest && outOfLife == 0)
 	{
@@ -55,7 +63,7 @@ int	life(int currentLevel)
 			{
 				/*here gonna come a submition function*/
 				printf("enter a number: ");
-				scanf("%d", &studentSubmition); //temporary for testing
+				scanf("%d", &studentSubmition); /*temporary for testing*/
 				lifeCounter++;
 			}
 		else
@@ -63,29 +71,37 @@ int	life(int currentLevel)
 	}
 	while (currentLevel <= 5)
 	{
-		if (outOfLife == 1)
+		do
 		{
-			//printf("Would you like to choose another level?\n");
-			printf("current level is: %d\n", currentLevel);
-		}
-		else
-		{
-			if (currentLevel == 5)
-				currentLevel = currentLevel - 1;	//decreasing lvl so we can keep the maximum lvl as result
-			currentLevel++;
-			printf("Succeeded!");
-			printf("current level is: %d", currentLevel);
-			/*gain 1 more level*/
+			if (outOfLife == 1)
+			{
+				printf("Would you like to choose another level? (y/n)\n");
+				scanf(" %c",&input); input = ft_toupper(input);
+				{
+					if (input == 'N')
+						exit(EXIT_FAILURE);	/*exiting if we don't want to continue*/
+				}
+				printf("current level is: %d\n", currentLevel);
+			}
+			else
+			{
+				if (currentLevel == 5)
+					currentLevel = currentLevel - 1;	//decreasing lvl so we can keep the maximum lvl as result
+				currentLevel++;
+				printf("Succeeded!");
+				printf("current level is: %d", currentLevel);
+				/*gain 1 more level*/
 
-			//tracker = (int *)malloc(sizeof(int) * currentLevel);
-			//free(tracker);
-			//currentLevel = *tracker;
-		}
+				//tracker = (int *)malloc(sizeof(int) * currentLevel);
+				//free(tracker);
+				//currentLevel = *tracker;
+			}
+			break;
+		} while(input != 'Y');	/*do while loop for the question to continue or no*/
 		break;
 	}
 	return (currentLevel);
 }
-
 
 void	level_modifier()
 {

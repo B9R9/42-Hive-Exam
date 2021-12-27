@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 11:40:27 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/23 12:06:49 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/27 13:50:14 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ void	sandbox_header();
 char	*function_generator(int nbr);
 void	openinstruction(char *fn, int lvl);
 void	ft_display_file(int fd);
+int		life(int result, int lvl);
 
 #endif

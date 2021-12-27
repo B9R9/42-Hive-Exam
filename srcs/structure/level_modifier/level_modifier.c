@@ -6,18 +6,11 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 15:05:01 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/27 14:10:56 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/27 14:23:27 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/libexam.h"
-
-static int	ft_toupper(int c)
-{
-	if (c >= 'a' && c <= 'z')
-		c = c - 32;
-	return (c);
-}
 
 int	life(int currentLevel)
 {

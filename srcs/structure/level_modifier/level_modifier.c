@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 15:05:01 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/26 12:12:46 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/27 10:39:22 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 #include<sys/types.h>
 #include<math.h>
 #include<stdbool.h>
-
+/*
 int	ft_number_lenght(long nb)
 {
 	int	counter;
@@ -38,81 +38,72 @@ int	ft_number_lenght(long nb)
 	}
 	return (counter);
 }
-
-void	life(void)
+*/
+int	life(int currentLevel)
 {
 	int	systemTest = 5;
 	int	studentSubmition;
 	int	lifeCounter = 0;
 	int	life = 3;
 	int	outOfLife = 0;
-	int	currentLevel;
-	int	*tracker;
+	//int	currentLevel;
+	//int	*tracker;
 
-	/*printf("Choose your level: ");
-	scanf("%d", &currentLevel);
-	if (currentLevel > 5)
-	{
-		printf("Error");
-		exit (EXIT_FAILURE);
-	}*/
 	while (studentSubmition != systemTest && outOfLife == 0)
 	{
 		if (lifeCounter < life)
 			{
 				/*here gonna come a submition function*/
 				printf("enter a number: ");
-				scanf("%d", &studentSubmition);
+				scanf("%d", &studentSubmition); //temporary for testing
 				lifeCounter++;
 			}
 		else
 			outOfLife = 1;
 	}
-	//tracker = (int *)malloc(sizeof(int) * ft_number_lenght(*currentLevel));
-	//free(tracker);
-	//currentLevel = tracker;
 	while (currentLevel <= 5)
 	{
 		if (outOfLife == 1)
 		{
-			printf("Would you like to choose another level?");
-			printf("current level is: %d", currentLevel);
-			//break;
+			//printf("Would you like to choose another level?\n");
+			printf("current level is: %d\n", currentLevel);
 		}
 		else
 		{
 			if (currentLevel == 5)
-				currentLevel--;	//decreasing lvl so we can keep the maximum lvl as result
+				currentLevel = currentLevel - 1;	//decreasing lvl so we can keep the maximum lvl as result
+			currentLevel++;
 			printf("Succeeded!");
+			printf("current level is: %d", currentLevel);
 			/*gain 1 more level*/
 
-			tracker = (int *)malloc(sizeof(int) * ft_number_lenght(currentLevel));
+			//tracker = (int *)malloc(sizeof(int) * currentLevel);
 			//free(tracker);
-			currentLevel = *tracker;
-
-			currentLevel++;
-			printf("current level is: %d", currentLevel);
-
+			//currentLevel = *tracker;
 		}
 		break;
 	}
-	//return (currentLevel);
+	return (currentLevel);
 }
 
 
 void	level_modifier()
 {
-	int	functionChoice;
 	int	userChoice;
 	do
 	{
 		printf("\nLevel00\nLevel01\nLevel02\nLevel04\nLevel05\n");
 		printf("Enter your level: \n");
 		scanf("%d", &userChoice);
-
+		if (userChoice > 5)
+		{
+			printf("\nError!\n");
+			printf("Please enter a valid level (0...5)!\n");
+			continue;
+		}
 		switch(userChoice)
 		{
-			case 1:
+			case 0:
 				/*do
 				{
 					printf("1. Add\n 2. Subtract\n3. Go back to menu");
@@ -124,46 +115,28 @@ void	level_modifier()
 
 					}
 				}while (functionChoice != 0);*/
-				life();
+				life(userChoice);
+				break;
+			case 1:
+				life(userChoice);
+				break;
 			case 2:
-				life();
+				life(userChoice);
+				break;
 			case 3:
-				life();
+				life(userChoice);
+				break;
 			case 4:
-				life();
+				life(userChoice);
+				break;
 			case 5:
-				life();
+				life(userChoice);
+				break;
 		}
-	}while (userChoice != 0);
+	}while (userChoice != 42); //the secret code how can get out of the system
 }
-
 
 int	main()
 {
-	//printf("your level is %d\n", currentLevel);
 	level_modifier();
-	//printf("your level is %d\n", currentLevel);
 }
-
-
-/*
-int	main()
-{
-	int	lvl;
-
-	life(lvl);
-	if (lvl == 0)
-	{
-		lvl = 1;
-		printf("your levele is %d\n", lvl);
-	}
-	else
-	{
-		(lvl = 1);
-		printf("failed\n");
-	}
-	printf("your levele is %d\n", lvl);
-
-	return (0);
-}
-*/

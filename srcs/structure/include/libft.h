@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:08:45 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/07 08:29:27 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/27 14:48:30 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include<unistd.h>
 # include<stdlib.h>
 # include<string.h>
+
+# define BUFF_SIZE 4096
+# define FD_SIZE 4096
 
 typedef struct s_list
 {
@@ -93,4 +96,8 @@ void		ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 /*EXTRA FUNCTION*/
 void		*ft_cleanstr(char	**s, size_t	i);
 int			ft_isspace(char	c);
+
+int			get_next_line(const int fd, char **line);
+
+
 #endif

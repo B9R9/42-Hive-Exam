@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 10:16:36 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/10 11:45:47 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/27 14:50:36 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "./libft/includes/libft.h"
 
 /*
-**ft_randomnbr:		
+**ft_randomnbr:
 randomly choose a number from the available functions from the choosen level
 */
 
@@ -32,7 +32,7 @@ int	ft_randomnbr(int n)
 }
 
 /*
-**ft_get_all_function:		
+**ft_get_all_function:
 outputing the total amount of functions number in integer for randomnbr
 */
 
@@ -41,7 +41,7 @@ int	ft_get_all_function(int nbr)
 	FILE	*fp = 0;
 	char	str[3];
 	int		ret;
-	
+
 	if (nbr == 0)
 		fp = fopen("./text/level00_function.txt", "r");
 	else if (nbr == 1)
@@ -74,7 +74,7 @@ char	*ft_get_function(int n, int nbr)
 	size_t		line_buffer_size;
 	ssize_t		line_size;
 	int			line_counter;
-	
+
 	line_buffer = NULL;
 	line_buffer_size = 0;
 	line_counter = 1;
@@ -90,13 +90,13 @@ char	*ft_get_function(int n, int nbr)
 		fp =fopen ("./text/level04_function.txt", "r");
 	else if (nbr == 5)
 		fp =fopen ("./text/level05_function.txt", "r");
-	else 
+	else
 		ft_putstrcolor("Error in get function", "red");
 
-	line_size = getline(&line_buffer, &line_buffer_size, fp);
+	line_size = get_next_line(&line_buffer, &line_buffer_size, fp);
 	while (line_size >= 1 )
 	{
-		line_size = getline(&line_buffer, &line_buffer_size, fp);
+		line_size = get_next_line(&line_buffer, &line_buffer_size, fp);
 		if (line_size == 1)
 			continue;
 		else if (line_counter == n)

@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 10:16:36 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/10 09:13:47 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/27 14:51:01 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,10 +72,10 @@ char	*ft_get_function(int n)
 	line_buffer_size = 0;
 	line_counter = 1;
 	fp = fopen("./structure/function_generator/level04_function.txt", "r");
-	line_size = getline(&line_buffer, &line_buffer_size, fp);
+	line_size = get_next_line(&line_buffer, &line_buffer_size, fp);
 	while (line_size >= 1)
 	{
-		line_size = getline(&line_buffer, &line_buffer_size, fp);
+		line_size = get_next_line(&line_buffer, &line_buffer_size, fp);
 		if (line_size == 1)
 			continue;
 		else if (line_counter == n)

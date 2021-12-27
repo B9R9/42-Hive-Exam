@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 21:24:36 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/10 09:19:02 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/19 10:39:09 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,48 @@ int	main()
  * MODE RUSSIAN ---> exercise until you fail
  * -> you failed the sessions only when you mess a function
  *
- *MODE CONTEST ---> DREAM SESSION
- -> play again your friend to solve function
-
- MODE DEBUG
- --> Debug codes  game
-
+ * MODE CONTEST ---> DREAM SESSION
+ *-> play again your friend to solve function
+ *
+ * MODE DEBUG
+ * --> Debug codes  game
+ * 
+ * MODE  correction
+ * We should offer the possibility in case of failure to explain what is expected
+ * and how to get the output
+ * we can do some functions who will explain line by line with the evolution of the variable
+ * 
+ * OTHER IDEAS FOR PRACTICING AND LEARN
+ * EX:
+ * 1write(1,_____,1);
+ *
+ * What should be there instead of _______
+ * your answer:
+ *
+ * It can take multiple answer like
+ * EX:
+ *
+ * void ft_putstr(1._______  str)
+ * {
+ *        if(!2.___)
+ *          3.____ (NULL);
+ *        4.____
+ *           while(5.______)
+ *           {
+ *              ft_putchar(6.____);
+ *              6._____
+ *           }
+ * }
+ * Please Write the answers
+ * 1.
+ * 2.
+ * 3.
+ * 1...
+ *
+ * FUNCTION HELP
+ * At any time you can press crtl + h to access tothe help
+ *
+ * We can maybe also create some multiple choice answer test
  * exercises are choosen ramdomly
  * exercises are class by level of difficulties
  */

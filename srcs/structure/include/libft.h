@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:08:45 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/27 14:48:30 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/27 14:57:54 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,5 @@ void		*ft_cleanstr(char	**s, size_t	i);
 int			ft_isspace(char	c);
 
 int			get_next_line(const int fd, char **line);
-
 
 #endif

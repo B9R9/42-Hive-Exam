@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 11:39:54 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/23 12:48:24 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/27 13:50:00 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,6 +141,18 @@ We can maybe also create some multiple choice answer test.
 			break ;
 		case 4:
 			/*NEED CHECKER CODE */
+		//	if(correctorfunction(test, lvl) == 1)
+		//		succeescounter += 1;
+		//		if (successcounter == 3)
+		//			life(lvl, success);
+		//			sucesscount = 0;
+		//	else 
+		//		failedcounter -=1;
+		//		if (falied counter == 3)
+		//			life(lvl,failed)
+		//			faliedcounter = 0;
+	
+		//	lvl = life(1, lvl);
 			break ;
 	}
 	}while (secondchoice != 5);

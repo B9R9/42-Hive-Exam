@@ -29,6 +29,7 @@ int	life(int currentLevel)
 				/*here gonna come a submition function*/
 				printf("enter a number: ");
 				scanf("%d", &studentSubmition);	/*temporary for testing*/
+
 				lifeCounter++;
 			}
 		else
@@ -52,16 +53,20 @@ int	life(int currentLevel)
 			else
 			{
 				if (currentLevel == 5)
+
 					currentLevel = currentLevel - 1;	/*decreasing lvl so we can keep the maximum lvl as result*/
 				currentLevel++;
 				printf("Succeeded!");
 				printf("current level is: %d", currentLevel);
 				/*gain 1 more level*/
+
 				return (0);
 			}
 			break;
 		} while (input != 'Y');	/*do while loop for the question to continue or no*/
+
 		break;
 	}
 	return (currentLevel);
 }
+

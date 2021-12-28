@@ -6,10 +6,12 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 15:05:01 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/27 14:23:27 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/28 10:00:42 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+/*
 #include "./include/libexam.h"
 
 int	life(int currentLevel)
@@ -26,9 +28,9 @@ int	life(int currentLevel)
 	{
 		if (lifeCounter < life)
 			{
-				/*here gonna come a submition function*/
+				//here gonna come a submition function
 				printf("enter a number: ");
-				scanf("%d", &studentSubmition);	/*temporary for testing*/
+				scanf("%d", &studentSubmition);	//temporary for testing
 
 				lifeCounter++;
 			}
@@ -45,7 +47,7 @@ int	life(int currentLevel)
 				scanf(" %c",&input); input = ft_toupper(input);
 				{
 					if (input == 'N')
-						exit(EXIT_FAILURE);	/*exiting if we don't want to continue*/
+						exit(EXIT_FAILURE);	//exiting if we don't want to continue
 				}
 				printf("current level is: %d\n", currentLevel);
 				return (1);
@@ -54,19 +56,81 @@ int	life(int currentLevel)
 			{
 				if (currentLevel == 5)
 
-					currentLevel = currentLevel - 1;	/*decreasing lvl so we can keep the maximum lvl as result*/
+					currentLevel = currentLevel - 1;	//decreasing lvl so we can keep the maximum lvl as result
 				currentLevel++;
 				printf("Succeeded!");
 				printf("current level is: %d", currentLevel);
-				/*gain 1 more level*/
+				//gain 1 more level
 
 				return (0);
 			}
 			break;
-		} while (input != 'Y');	/*do while loop for the question to continue or no*/
+		} while (input != 'Y');	//do while loop for the question to continue or no
 
 		break;
 	}
 	return (currentLevel);
 }
 
+void    level_modifier()
+{
+    int userChoice;
+    int counter;
+    do
+    {
+        printf("Succeeded %d\n", counter);
+        printf("\nLevel00\nLevel01\nLevel02\nLevel04\nLevel05\n");
+        printf("Enter your level: \n");
+        scanf("%d", &userChoice);
+        if (userChoice > 5)
+        {
+            printf("\nError!\n");
+            printf("Please enter a valid level (0...5)!\n");
+            continue;
+        }
+        switch(userChoice)
+        {
+            case 0:*/
+                /*do
+                {
+                    printf("1. Add\n 2. Subtract\n3. Go back to menu");
+                    scanf("%d", &functionChoice);
+                    switch (functionChoice)
+                    {
+                        case 1:
+                        function_generator(lvl);
+
+                    }
+                }while (functionChoice != 0);*//*
+                if (life(userChoice) == 0)
+                    counter++;
+                break;
+            case 1:
+                if (life(userChoice) == 0)
+                    counter++;
+                break;
+            case 2:
+                if (life(userChoice) == 0)
+                    counter++;
+                break;
+            case 3:
+                if (life(userChoice) == 0)
+                    counter++;
+                break;
+            case 4:
+                if (life(userChoice) == 0)
+                    counter++;
+                break;
+            case 5:
+                if (life(userChoice) == 0)
+                    counter++;
+                break;
+        }
+    }while (userChoice != 42); //the secret code how can get out of the system
+}
+
+int main()
+{
+    level_modifier();
+}
+*/

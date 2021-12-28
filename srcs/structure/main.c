@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 21:24:36 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/28 09:44:42 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/28 09:53:21 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,7 @@ int	main()
  * all the .c file could go to the same directory
  * organise stuff
  * we have multiple times randomnbr function, level_modifier, function generator
+ *
  */
 }
 

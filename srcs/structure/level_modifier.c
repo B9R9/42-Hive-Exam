@@ -6,9 +6,11 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 15:05:01 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/27 11:39:05 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/28 09:39:12 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*THIS FILE DON'T NEED HERE, AND ITS OLD VERSION*/
 
 #include<time.h>
 #include<stdlib.h>

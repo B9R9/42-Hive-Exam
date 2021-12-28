@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:08:45 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/27 12:27:56 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/28 09:28:34 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@
 # include<string.h>
 # include<fcntl.h>
 # include<time.h>
+
+/*DEFINE_BUFFERS*/
+
+# define BUFF_SIZE 4096
+# define FD_SIZE 4096
 
 /*DEFINE*/
 
@@ -111,4 +116,7 @@ void		ft_putstrcolor(char *str, char *color);
 void		ft_putcharcolor(char c, char *color);
 int			ft_randomnbr(void);
 void		ft_display_file(int fd);
+
+int	get_next_line(const int fd, char **line);
+
 #endif

@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 21:24:36 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/19 10:39:09 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/28 09:44:42 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,12 +63,12 @@ int	main()
  *
  * MODE DEBUG
  * --> Debug codes  game
- * 
+ *
  * MODE  correction
  * We should offer the possibility in case of failure to explain what is expected
  * and how to get the output
  * we can do some functions who will explain line by line with the evolution of the variable
- * 
+ *
  * OTHER IDEAS FOR PRACTICING AND LEARN
  * EX:
  * 1write(1,_____,1);
@@ -102,6 +102,14 @@ int	main()
  * We can maybe also create some multiple choice answer test
  * exercises are choosen ramdomly
  * exercises are class by level of difficulties
+ *
+ *
+ *
+ * CLEAN_GARBAGE_OUT
+ *
+ * all the .c file could go to the same directory
+ * organise stuff
+ * we have multiple times randomnbr function, level_modifier, function generator
  */
 }
 

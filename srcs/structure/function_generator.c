@@ -6,19 +6,19 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 10:16:36 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/27 14:50:36 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/29 12:55:34 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/libexam.h"
-#include "./libft/includes/libft.h"
+#include "./libft/libft.h"
 
 /*
 **ft_randomnbr:
 randomly choose a number from the available functions from the choosen level
 */
 
-int	ft_randomnbr(int n)
+static int	ft_modified_randomnbr(int n)
 {
 	srand(time(NULL));
 	int	nbr;
@@ -36,7 +36,7 @@ int	ft_randomnbr(int n)
 outputing the total amount of functions number in integer for randomnbr
 */
 
-int	ft_get_all_function(int nbr)
+static int	ft_get_all_function(int nbr)
 {
 	FILE	*fp = 0;
 	char	str[3];
@@ -67,7 +67,7 @@ int	ft_get_all_function(int nbr)
 **and output it, that ft_randomnbr could chose randomly one
 */
 
-char	*ft_get_function(int n, int nbr)
+static char	*ft_get_function(int n, int nbr)
 {
 	FILE		*fp = 0;
 	char		*line_buffer;
@@ -113,5 +113,5 @@ char	*ft_get_function(int n, int nbr)
 
 char	*function_generator(int nbr)
 {
-	return (ft_get_function(ft_randomnbr(ft_get_all_function(nbr)), nbr));
+	return (ft_get_function(ft_modified_randomnbr(ft_get_all_function(nbr)), nbr));
 }

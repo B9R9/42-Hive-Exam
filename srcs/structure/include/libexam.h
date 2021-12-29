@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 11:40:27 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/28 09:37:02 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/29 12:59:46 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,10 @@ int lvl;
 
 /*PROTOTYPE*/
 
-int		ft_randomnbr(int n);
 void	exam_header();
 void	sandbox_header();
 char	*function_generator(int nbr);
 void	openinstruction(char *fn, int lvl);
-void	ft_display_file(int fd);
 int		life(int currentLevel);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:08:45 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/28 09:28:34 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/29 12:57:02 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,6 @@ void		ft_putcharcolor(char c, char *color);
 int			ft_randomnbr(void);
 void		ft_display_file(int fd);
 
-int	get_next_line(const int fd, char **line);
+int	        get_next_line(const int fd, char **line);
 
 #endif

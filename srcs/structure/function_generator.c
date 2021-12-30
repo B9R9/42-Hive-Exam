@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 10:16:36 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/29 12:55:34 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/29 18:50:27 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,10 +93,10 @@ static char	*ft_get_function(int n, int nbr)
 	else
 		ft_putstrcolor("Error in get function", "red");
 
-	line_size = get_next_line(&line_buffer, &line_buffer_size, fp);
+	line_size = getline(&line_buffer, &line_buffer_size, fp);
 	while (line_size >= 1 )
 	{
-		line_size = get_next_line(&line_buffer, &line_buffer_size, fp);
+		line_size = getline(&line_buffer, &line_buffer_size, fp);
 		if (line_size == 1)
 			continue;
 		else if (line_counter == n)

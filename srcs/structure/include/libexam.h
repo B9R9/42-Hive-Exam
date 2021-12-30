@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 11:40:27 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/29 12:59:46 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/29 18:43:46 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,9 @@
 # include <sys/types.h>
 # include <math.h>
 # include <stdbool.h>
-
+# include "../libft/libft.h"
 /*GLOBAL_VARIABLES*/
 
-int lvl;
 
 //#include "libft.h"
 

@@ -6,12 +6,12 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 09:17:15 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/23 12:48:18 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/29 18:39:23 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/libexam.h"
-#include "./libft/includes/libft.h"
+#include "./libft/libft.h"
 
 void	openinstruction(char *fn, int lvl)
 {

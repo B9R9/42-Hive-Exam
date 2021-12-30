@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 15:05:01 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/27 14:23:27 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/29 19:11:14 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int	life(int currentLevel)
 	int		life = 3;
 	int		outOfLife = 0;
 	char	input;
-	int		counter = 0;
 
 	while (studentSubmition != systemTest && outOfLife == 0)
 	{

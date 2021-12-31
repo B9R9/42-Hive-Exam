@@ -1,4 +1,4 @@
-15
+13
 
 ft_list_remove
 sort_list
@@ -12,4 +12,4 @@ ft_list_foreach
 ft_split
 rev_wstr
 rostring
-sort_int_tab
+sort_in_tab

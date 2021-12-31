@@ -458,7 +458,7 @@ void	openinstruction(char *fn, int lvl)
 		}
 		else if(ft_strcmp(fn, "sort_in_tab") == 0)
 		{
-			fd = open("./text/instruction/lvl4/sort_int_tab.txt", O_RDONLY);
+			fd = open("./text/instruction/lvl4/sort_in_tab.txt", O_RDONLY);
 			if (!fd)
 				ft_putstrcolor("ERROR", "red");
 		}

@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 10:16:36 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/29 18:50:27 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/31 10:56:57 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 #include "./libft/libft.h"
 
 /*
-**ft_randomnbr:
-randomly choose a number from the available functions from the choosen level
+**ft_randomnbr:		randomly choose a number from the available functions from the choosen level
 */
 
-static int	ft_modified_randomnbr(int n)
+static int	ft_randomnbr(int n)
 {
+	//function need to take int n. n will be the total of len arr name function level i.
 	srand(time(NULL));
 	int	nbr;
 	int	min;
@@ -32,13 +32,12 @@ static int	ft_modified_randomnbr(int n)
 }
 
 /*
-**ft_get_all_function:
-outputing the total amount of functions number in integer for randomnbr
+**ft_get_all_function:		outputing the total amount of functions number in integer for randomnbr
 */
 
 static int	ft_get_all_function(int nbr)
 {
-	FILE	*fp = 0;
+	FILE	*fp = NULL;
 	char	str[3];
 	int		ret;
 
@@ -69,49 +68,44 @@ static int	ft_get_all_function(int nbr)
 
 static char	*ft_get_function(int n, int nbr)
 {
-	FILE		*fp = 0;
-	char		*line_buffer;
-	size_t		line_buffer_size;
-	ssize_t		line_size;
-	int			line_counter;
+	int			fp = 0;
+	char		*line_buffer = NULL;
+	int			line_size;
+	int			line_counter = 0;
 
-	line_buffer = NULL;
-	line_buffer_size = 0;
-	line_counter = 1;
 	if (nbr == 0)
-		fp = fopen("./text/level00_function.txt", "r");
+		fp = open("./text/level00_function.txt", O_RDONLY);
 	else if (nbr == 1)
-		fp =fopen ("./text/level01_function.txt", "r");
+		fp = open ("./text/level01_function.txt", O_RDONLY);
 	else if (nbr == 2)
-		fp =fopen ("./text/level02_function.txt", "r");
+		fp = open ("./text/level02_function.txt", O_RDONLY);
 	else if (nbr == 3)
-		fp =fopen ("./text/level03_function.txt", "r");
+		fp = open ("./text/level03_function.txt", O_RDONLY);
 	else if (nbr == 4)
-		fp =fopen ("./text/level04_function.txt", "r");
+		fp = open ("./text/level04_function.txt", O_RDONLY);
 	else if (nbr == 5)
-		fp =fopen ("./text/level05_function.txt", "r");
+		fp = open ("./text/level05_function.txt", O_RDONLY);
 	else
 		ft_putstrcolor("Error in get function", "red");
-
-	line_size = getline(&line_buffer, &line_buffer_size, fp);
-	while (line_size >= 1 )
+	line_size = get_next_line(fp, &line_buffer);
+	while (line_size >= 0)
 	{
-		line_size = getline(&line_buffer, &line_buffer_size, fp);
-		if (line_size == 1)
-			continue;
+		free(line_buffer);
+		line_size = get_next_line(fp, &line_buffer);
+		if (line_size == 0)
+			break;
 		else if (line_counter == n)
 		{
-			return(line_buffer);
+			return (line_buffer);
+			break ;
 		}
 		line_counter++;
 	}
-	free(line_buffer);
-	line_buffer = NULL;
-	fclose(fp);
+	close(fp);
 	return (line_buffer);
 }
 
 char	*function_generator(int nbr)
 {
-	return (ft_get_function(ft_modified_randomnbr(ft_get_all_function(nbr)), nbr));
+	return (ft_get_function(ft_randomnbr(ft_get_all_function(nbr)), nbr));
 }

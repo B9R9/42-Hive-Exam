@@ -2,7 +2,7 @@
 
 ft_strcpy
 ft_strlen
-repeat_aplha
+repeat_alpha
 search_and_replace
 ulstr
 rot_13

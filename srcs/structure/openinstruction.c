@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   openinstruction.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 09:17:15 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/29 18:39:23 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/31 11:00:05 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	openinstruction(char *fn, int lvl)
 {
 	/*---------------------------DANGER ------------------------
 	 * The result of  ft_strcmp is not  reliable
-	 * it can generate mistake when you will have a difference of 10 between 
+	 * it can generate mistake when you will have a difference of 10 between
 	 * two string
 	 */
 	if (lvl == 0)
@@ -96,7 +96,7 @@ void	openinstruction(char *fn, int lvl)
 		close(fd);
 	}
 /*--------------------------------- LEVEL 1 ---------------------------------*/
-		
+
 	else if (lvl == 1)
 	{
 		int	fd = 0;
@@ -176,7 +176,7 @@ void	openinstruction(char *fn, int lvl)
 		close(fd);
 	}
 /*--------------------------- LEVEL 2 ---------------------------------------*/
-	
+
 	else if (lvl == 2)
 	{
 		int	fd = 0;
@@ -281,7 +281,7 @@ void	openinstruction(char *fn, int lvl)
 	}
 
 /*--------------------------- LEVEL 3 ---------------------------------------*/
-	
+
 	else if (lvl == 3)
 	{
 		int	fd = 0;
@@ -340,9 +340,9 @@ void	openinstruction(char *fn, int lvl)
 			if (!fd)
 				ft_putstrcolor("ERROR", "red");
 		}
-		else if(ft_strcmp(fn, "paramsun") == 10)
+		else if(ft_strcmp(fn, "paramsum") == 10)
 		{
-			fd = open("./text/instruction/lvl3/paramsun.txt", O_RDONLY);
+			fd = open("./text/instruction/lvl3/paramsum.txt", O_RDONLY);
 			if (!fd)
 				ft_putstrcolor("ERROR", "red");
 		}
@@ -358,15 +358,15 @@ void	openinstruction(char *fn, int lvl)
 			if (!fd)
 				ft_putstrcolor("ERROR", "red");
 		}
-		else if(ft_strcmp(fn, "rstr_capitallizer") == 10)
+		else if(ft_strcmp(fn, "rstr_capitalizer") == 10)
 		{
-			fd = open("./text/instruction/lvl3/rstr_capitalliser.txt", O_RDONLY);
+			fd = open("./text/instruction/lvl3/rstr_capitalizer.txt", O_RDONLY);
 			if (!fd)
 				ft_putstrcolor("ERROR", "red");
 		}
 		else if(ft_strcmp(fn, "str_capitalizer") == 10)
 		{
-			fd = open("./text/instruction/lvl3/str_capitaliser.txt", O_RDONLY);
+			fd = open("./text/instruction/lvl3/str_capitalizer.txt", O_RDONLY);
 			if (!fd)
 				ft_putstrcolor("ERROR", "red");
 		}
@@ -385,7 +385,7 @@ void	openinstruction(char *fn, int lvl)
 		close(fd);
 	}
 /*--------------------------- LEVEL 4 ---------------------------------------*/
-	
+
 	else if (lvl == 4)
 	{
 		int	fd = 0;
@@ -478,7 +478,7 @@ void	openinstruction(char *fn, int lvl)
 		close(fd);
 	}
 /*--------------------------- LEVEL 5 ---------------------------------------*/
-	
+
 	else if (lvl == 5)
 	{
 		int	fd = 0;

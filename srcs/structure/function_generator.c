@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 10:16:36 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/31 10:56:57 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/31 11:10:23 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **ft_randomnbr:		randomly choose a number from the available functions from the choosen level
 */
 
-static int	ft_randomnbr(int n)
+int	ft_randomnbr(int n)
 {
 	//function need to take int n. n will be the total of len arr name function level i.
 	srand(time(NULL));
@@ -35,7 +35,7 @@ static int	ft_randomnbr(int n)
 **ft_get_all_function:		outputing the total amount of functions number in integer for randomnbr
 */
 
-static int	ft_get_all_function(int nbr)
+int	ft_get_all_function(int nbr)
 {
 	FILE	*fp = NULL;
 	char	str[3];
@@ -66,7 +66,7 @@ static int	ft_get_all_function(int nbr)
 **and output it, that ft_randomnbr could chose randomly one
 */
 
-static char	*ft_get_function(int n, int nbr)
+char	*ft_get_function(int n, int nbr)
 {
 	int			fp = 0;
 	char		*line_buffer = NULL;

@@ -6,16 +6,17 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 15:05:01 by ghorvath          #+#    #+#             */
-/*   Updated: 2021/12/29 19:11:14 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/31 11:14:39 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/libexam.h"
+#include "./libft/libft.h"
 
 int	life(int currentLevel)
 {
 	int		systemTest = 5;
-	int		studentSubmition;
+	int		studentSubmition = 0; //normally here we don t have value, just for now to work the function
 	int		lifeCounter = 0;
 	int		life = 3;
 	int		outOfLife = 0;

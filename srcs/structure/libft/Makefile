@@ -28,7 +28,7 @@ FILES=	ft_putchar.c	ft_putchar_fd.c		ft_putendl.c		ft_tolower.c\
 		ft_strsplit.c	ft_cleanstr.c		ft_lstnew.c			ft_lstadd.c	\
 		ft_lstdelone.c	ft_lstdel.c			ft_color.c						\
 		ft_putstrcolor.c					ft_putcharcolor.c				\
-		ft_randomnbr.c 	ft_display_file.c	get_next_line.c					\
+		ft_display_file.c	get_next_line.c					\
 
 OBJ=$(SRC:.c=.o)
 RM=rm -f

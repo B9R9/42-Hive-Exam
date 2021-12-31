@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: briffard <briffard@student.42.fr>          +#+  +:+       +#+         #
+#    By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/29 18:18:16 by briffard          #+#    #+#              #
-#    Updated: 2021/12/29 19:32:08 by briffard         ###   ########.fr        #
+#    Updated: 2021/12/31 11:17:50 by ghorvath         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,4 +47,6 @@ clean:
 
 fclean: clean
 	$(RM) $(NAME) sandbox
+
+re:	fclean sandbox
 

@@ -6,12 +6,12 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 11:39:54 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/28 09:38:01 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/31 11:14:51 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"./include/libexam.h"
-//#include "./libft/includes/libft.h"
+#include "./include/libexam.h"
+#include "./libft/libft.h"
 
 static char	*file_name(char *fn)
 {

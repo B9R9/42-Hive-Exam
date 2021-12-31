@@ -6,7 +6,7 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 11:39:54 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/31 11:14:51 by ghorvath         ###   ########.fr       */
+/*   Updated: 2021/12/31 11:25:09 by ghorvath         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,7 +140,8 @@ We can maybe also create some multiple choice answer test.
 			test = function_generator(lvl);
 			break ;
 		case 4:
-			life(lvl);
+			if (life(lvl) == 0)
+				lvl++;
 			/*NEED CHECKER CODE */
 		//	if(correctorfunction(test, lvl) == 1)
 		//		succeescounter += 1;

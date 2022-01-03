@@ -6,7 +6,7 @@
 #    By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/29 18:18:16 by briffard          #+#    #+#              #
-#    Updated: 2021/12/31 11:17:50 by ghorvath         ###   ########.fr        #
+#    Updated: 2022/01/03 11:37:58 by briffard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,24 +23,26 @@ OBJ= $(FILES:.c=.o)
 
 INCL=includes
 
+MAKE=make
 CC= gcc
 CCFLAGS=-Werror -Wall -Wextra
 RM= rm -f
 
-libft:
+lib:
 	make -C libft/ fclean && make -C libft/
+	make -C libft/ clean
 
 help:
 	@echo "COMMANDS LIST"
 	@echo "libft	: Create libft.a"
 	@echo "help	: Show all commands"
-	@echo "clean	: Delete all .o"
+	@echo "clean	: Delete all .o files"
 	@echo "fclean	: Do clean and remove executable file"
-	@echo "sandbox	: Compiling file for sandbox mod only"
+	@echo "sandbox	: Compiling files for sandbox mod only"
 
 sandbox:
 	$(CC) $(CCFLAGS) -c $(FILES)
-	$(CC) $(CCFLAGS) -o sandbox $(OBJ) -I $(INCL) -L$(LIBFT)
+	$(CC) $(CCFLAGS) -o sandbox $(OBJ) -I $(INCL) -L $(LIBFT)
 
 clean:
 	$(RM) $(OBJ)

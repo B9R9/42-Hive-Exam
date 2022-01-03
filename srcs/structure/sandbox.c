@@ -6,18 +6,12 @@
 /*   By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 11:39:54 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/31 11:25:09 by ghorvath         ###   ########.fr       */
+/*   Updated: 2022/01/03 17:32:46 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/libexam.h"
 #include "./libft/libft.h"
-
-static char	*file_name(char *fn)
-{
-	fn[ft_strlen(fn)] = '\0';
-	return (fn);
-}
 
 int	main()
 {
@@ -68,7 +62,7 @@ int	main()
 	 * */
 	sandbox_header();
 	printf("CURRENT  LVL : %d\n", lvl);//find a nicer place
-	openinstruction(file_name(test), lvl);
+	openinstruction(test, lvl);
 
 /*------------------------------ FILE CHECKER -------------------------------------*/
 
@@ -140,6 +134,8 @@ We can maybe also create some multiple choice answer test.
 			test = function_generator(lvl);
 			break ;
 		case 4:
+			system ("bash bender_bash_compilation.sh");
+			system ("bash bender_bash.sh");
 			if (life(lvl) == 0)
 				lvl++;
 			/*NEED CHECKER CODE */

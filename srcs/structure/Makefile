@@ -6,7 +6,7 @@
 #    By: ghorvath <ghorvath@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/29 18:18:16 by briffard          #+#    #+#              #
-#    Updated: 2022/01/03 11:37:58 by briffard         ###   ########.fr        #
+#    Updated: 2022/01/03 16:48:04 by briffard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ help:
 sandbox:
 	$(CC) $(CCFLAGS) -c $(FILES)
 	$(CC) $(CCFLAGS) -o sandbox $(OBJ) -I $(INCL) -L $(LIBFT)
+	$(RM) $(OBJ)
 
 clean:
 	$(RM) $(OBJ)
